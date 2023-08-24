@@ -1,0 +1,418 @@
+/* Reset CSS*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* Common */
+
+/* 
+Thuong thi mot trang web se co cau truc duoc chia thanh cac hang  
+cac cot.
+Vay nen de cho thuan tien thi se co cac css chung cho cac hang va cac cot.
+*/
+
+html {
+    font-family: Helvetica ,Arial , sans-serif;
+}
+
+.clear {
+    clear: both;
+}
+
+.text-white {
+    color:#fff !important;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.one-col {
+    width: 100%;
+}
+
+.three-col {
+    width: calc(100%/3);
+}
+
+.two-col {
+    width: 50%;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.pull-right {
+    float: right !important;    
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+
+.middle
+
+/*
+1. Lam tu ngoai vao trong
+2. Lam tu tren xuong duoi
+3. Tong quan den chi tiet 
+*/
+
+/*
+1. Vi tri
+2. Kich thuoc
+3. Mau sac
+4. Kieu dang (Kieu chu , hinh tron, vuong ...)
+*/
+
+/* Main */
+.wrapper {
+
+}
+
+.header {
+    height: 46px;
+    background-color: #000;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.nav ,  .more_nav { 
+    display: inline-block;
+    list-style: none;
+}
+
+.nav > li {
+    display: inline-block;
+}
+
+.nav .nav-arrow-down {
+    font-size: 14px;
+}
+.nav li {
+    position: relative;
+}
+
+/* Ket hop bang dau phay*/
+.nav .more_nav li:hover a,
+.nav > li:hover > a{
+    color: #000;
+    background-color: #ccc;
+}
+
+.nav li a {
+    display: block;
+    padding: 0 24px;
+    line-height: 46px;
+    text-decoration: none;
+}
+
+.nav li:hover .more_nav {
+    display: block;
+}
+
+.nav > li > a {
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.nav .more_nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    display: none;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0, 0.3);
+}
+
+.nav .more_nav a {
+    line-height: 38px;
+    padding: 0 12px;
+    color: #000;
+}
+
+.header .search_btn {
+    float: right;
+    padding: 0 21px;
+}
+
+.header .search_btn:hover{
+    background-color: orangered;
+    cursor: pointer;
+}
+
+.header .search_icon {
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+}
+
+.slider {
+    margin-top: 46px;
+    position: relative;
+    background-color: #fff;
+    padding-top: 50%;  /* 50% chieu ngang cua chinh no */
+    background: url('/w3_band/assets/img/slider/slider1.jpg') top center / cover no-repeat;
+}
+
+.slider .text-content {
+    position: absolute;
+    bottom: 48px;
+    color:#fff;
+    /* Can giua */
+    left: 50%;
+    transform: translateX(-50%);
+    /* 
+    Cach khac
+    1. width: 100%;
+    2. 
+    right: 0;
+    left: 0;
+     */
+    text-align: center;
+}
+
+.slider .text-heading {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.slider .text-description {
+    font-size: 15px;
+    margin-top: 25px;
+}
+.content {
+
+}
+
+.content .content-section {
+    width: 800px;
+    margin: 0 auto;
+    padding: 64px 0;
+}
+
+.content .section-heading {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 30px;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.content .section-subheading {
+    text-align: center;
+    font-size: 15px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+.content .about-text {
+    margin-top: 25px;
+    font-size: 15px;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+.content .member-list {
+    margin-top: 48px;
+    /* overflow: hidden; */
+}
+
+.content .member-item {
+    /* Bien block thanh inline-block */
+    text-align: center;
+}
+
+.content .member-name {
+    font-size: 15px;
+}
+
+.content .member-img {
+    margin-top: 15px;
+    width: 154px;
+    border-radius: 4px;
+}
+
+/* Tour section */
+
+.tour-section {
+    background-color: #000;
+}
+
+.ticket-list {
+    background-color: #fff;
+    margin-top: 40px;
+    list-style: none;
+}
+
+.ticket-list li {
+    color: #757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd ;
+}
+
+.ticket-list .sold-out {
+    color: #fff;
+    background-color: #f44336;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+
+.ticket-list .quantity {
+    font-size: 15px;
+    float: right;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -4px;
+}
+
+.places-list {
+    margin-top: 32px;
+    margin-bottom: 48px;
+
+}
+
+
+.place-img {
+    display: block;
+    width: 100%;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-body {
+    font-size: 15px;
+    padding: 16px;
+    background-color: #fff;
+}
+
+.place-heading {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.place-time {
+    margin-top: 15px;
+    color: #757575;
+}
+
+.place-desc {
+    margin-top: 15px;
+    line-height: 20px;
+}
+
+.btn {
+    color: #fff;
+    background-color: #000;
+    padding: 11px 16px;
+    margin-top: 15px;
+    display: inline-block;
+    text-decoration: none;
+    border: none;
+}
+
+.btn:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+
+}
+
+/* Contact */
+.contact-content {
+    margin-top: 48px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    outline: none;
+}
+
+
+/* [class*="----"]
+The hien trong the co chua class nay.
+ */
+.contact-info i[class*="ti-"] {
+    display: inline-block;
+    width: 30px;
+}
+
+/* Map */
+.map-section > img {
+    width: 100%;
+}
+
+/* Footer seciton */
+.footer {
+    padding: 64px 16px;
+}
+
+.social {
+    font-size: 24px;
+}
+
+.social a {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+.social a:hover {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.copyright {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+.copyright a {
+    color: rgba(0, 0, 0, 0.6);
+}
