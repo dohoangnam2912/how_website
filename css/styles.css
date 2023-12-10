@@ -178,7 +178,7 @@ html {
     position: relative;
     background-color: #fff;
     padding-top: 50%;  /* 50% chieu ngang cua chinh no */
-    background: url(img/slider/slider1.jpg') top center / cover no-repeat;
+    background: url(./img/slider/slider1.jpg') top center / cover no-repeat;
 }
 
 .slider .text-content {
